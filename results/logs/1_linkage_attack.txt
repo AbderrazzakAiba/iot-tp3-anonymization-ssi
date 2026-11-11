@@ -1,0 +1,17 @@
+Linkage attack on the naive release (identifiers removed only)
+             released_records  unique_matches  correct_reidentifications  reidentification_rate  unique_in_release  unique_share
+zip                     313.0             0.0                        0.0                 0.0000                0.0        0.0000
+age+sex                 313.0             3.0                        3.0                 0.0096               42.0        0.1342
+age+zip                 313.0            88.0                       88.0                 0.2812              238.0        0.7604
+age+zip+sex             313.0           150.0                      150.0                 0.4792              275.0        0.8786
+
+Examples of re-identified households (name recovered + sensitive data):
+record_id age sex  zip                 full_name  annual_kwh  night_share occupancy_profile
+    r0003  39   F 2790 Patricia Teixeira Pereira   4375852.0        0.175      evening_peak
+    r0006  64   F 1150      Joana Carvalho Silva    631647.0        0.127              flat
+    r0007  73   M 2720     Andre Alves Goncalves    744404.0        0.152              flat
+    r0008  25   F 1069  Ines Rodrigues Fernandes    632583.0        0.191      evening_peak
+    r0009  46   M 2600       Bruno Silva Marques    842905.0        0.138      evening_peak
+    r0012  40   F 1200 Patricia Oliveira Almeida    102524.0        0.241      evening_peak
+    r0014  47   M 1200       Manuel Santos Jesus   1055770.0        0.241      evening_peak
+    r0017  64   F 1300    Catarina Sousa Ribeiro   2293922.0        0.166              flat

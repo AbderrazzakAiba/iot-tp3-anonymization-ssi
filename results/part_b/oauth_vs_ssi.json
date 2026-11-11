@@ -1,0 +1,151 @@
+{
+  "oauth": {
+    "idp_log": [
+      {
+        "time": "2026-11-12T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-13T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-14T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-15T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-16T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-17T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-18T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "smart-lock",
+        "scopes": [
+          "openid",
+          "profile",
+          "address"
+        ]
+      },
+      {
+        "time": "2026-11-14T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "age-restricted-service",
+        "scopes": [
+          "openid",
+          "profile"
+        ]
+      },
+      {
+        "time": "2026-11-17T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "age-restricted-service",
+        "scopes": [
+          "openid",
+          "profile"
+        ]
+      },
+      {
+        "time": "2026-11-15T07:07:13Z",
+        "user": "ahmed-4821",
+        "client": "pharmacy",
+        "scopes": [
+          "openid",
+          "profile",
+          "email",
+          "address"
+        ]
+      }
+    ],
+    "services_learned": {
+      "smart-lock": [
+        "address",
+        "birthdate",
+        "family_name",
+        "given_name",
+        "sub"
+      ],
+      "age-restricted-service": [
+        "birthdate",
+        "family_name",
+        "given_name",
+        "sub"
+      ],
+      "pharmacy": [
+        "address",
+        "birthdate",
+        "email",
+        "family_name",
+        "given_name",
+        "sub"
+      ]
+    }
+  },
+  "ssi": {
+    "issuer_log": [
+      {
+        "time": "2026-11-11T23:07:13Z",
+        "event": "issued",
+        "holder": "did:key:z6MkuyLrWq3Ee65aZqbcjqz32Hnv7Va9icWwG5CrgaJRd7sE",
+        "credential": "urn:uuid:81c62132-3ab0-4737-ac86-f3947dbcda10",
+        "type": "ResidentCredential"
+      }
+    ],
+    "services_learned": {
+      "smart-lock": [
+        "resident_city"
+      ],
+      "age-restricted-service": [
+        "over_18"
+      ],
+      "pharmacy": [
+        "family_name",
+        "given_name"
+      ]
+    }
+  }
+}

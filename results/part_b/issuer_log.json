@@ -1,0 +1,14 @@
+[
+  {
+    "time": "2026-11-11T23:07:12Z",
+    "event": "issued",
+    "holder": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "type": "ResidentCredential"
+  },
+  {
+    "time": "2026-11-11T23:22:12Z",
+    "event": "revoked",
+    "credential": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9"
+  }
+]

@@ -1,0 +1,94 @@
+
+==============================================================================
+1. Roles and decentralized identifiers (did:key, Ed25519)
+==============================================================================
+  issuer      did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu
+  holder      did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT
+  smart lock  did:key:z6MkvibY4kc8JqmMsXjLXot6kWMPkBfDFEUSjL2UVjb9FHzA
+  service     did:key:z6MkrG8jQ3PrmJZ6dkznSz4j3egcLWwm1uWy3C9Xt7HNeGmN
+
+==============================================================================
+2. Issuance: holder proves control of its DID, issuer signs the credential
+==============================================================================
+  credential id : urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9
+  signed digests: 7 (5 claims + 2 decoys) - no claim value appears in the credential
+  wallet holds  : {'given_name': 'Ahmed', 'family_name': 'Benali', 'birth_date': '1998-04-17', 'resident_city': 'El Oued', 'over_18': True}
+
+==============================================================================
+3. Verifiers download the signed revocation list once (then work offline)
+==============================================================================
+  status list did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu#status-1  (131072 bits, gzip)
+
+==============================================================================
+4. Selective disclosure: each verifier learns exactly one attribute
+==============================================================================
+  Smart lock asks for residency
+    -> ACCEPT: access granted
+    verifier learned: {'resident_city': 'El Oued'}
+    [front-door] UNLOCKED
+  Service asks for age >= 18 (birth date hidden)
+    -> ACCEPT: access granted
+    verifier learned: {'over_18': True}
+
+==============================================================================
+5. Attacks that must fail
+==============================================================================
+  Replay the captured presentation
+    -> REJECT: unknown, expired or reused challenge (replay)
+    [front-door] stays LOCKED - unknown, expired or reused challenge (replay)
+  Holder invents a disclosure that the issuer never signed
+    -> REJECT: disclosure does not match the signed digests
+    [front-door] stays LOCKED - disclosure does not match the signed digests
+  Mallory presents a stolen credential
+    -> REJECT: presenter is not the credential subject
+    [front-door] stays LOCKED - presenter is not the credential subject
+  Mallory also claims Ahmed's DID as holder
+    -> REJECT: holder signature invalid (stolen or altered presentation)
+    [front-door] stays LOCKED - holder signature invalid (stolen or altered presentation)
+  Mallory self-issues a residency credential
+    -> REJECT: issuer is not trusted
+    [front-door] stays LOCKED - issuer is not trusted
+  Holder reveals only given_name to the lock
+    -> REJECT: claim 'resident_city' not disclosed
+    verifier learned: {'given_name': 'Ahmed'}
+    [front-door] stays LOCKED - claim 'resident_city' not disclosed
+  Presentation made for the service is forwarded to the lock
+    -> REJECT: presentation was made for another verifier
+    [front-door] stays LOCKED - presentation was made for another verifier
+
+==============================================================================
+6. Revocation
+==============================================================================
+  municipality revokes the credential (Ahmed moved away)
+  Before the lock refreshes its list (staleness window)
+    -> ACCEPT: access granted
+    verifier learned: {'resident_city': 'El Oued'}
+    [front-door] UNLOCKED
+  lock downloads the new signed status list
+  After refresh
+    -> REJECT: credential revoked
+    verifier learned: {'resident_city': 'El Oued'}
+    [front-door] stays LOCKED - credential revoked
+  Service whose status list is 2 h old (max 1 h)
+    -> REJECT: no fresh revocation list (fail closed)
+    verifier learned: {'over_18': True}
+
+==============================================================================
+7. What each party learned
+==============================================================================
+  Issuer log (only issuance / revocation events, no usage):
+    {'time': '2026-11-11T23:07:12Z', 'event': 'issued', 'holder': 'did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT', 'credential': 'urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9', 'type': 'ResidentCredential'}
+    {'time': '2026-11-11T23:22:12Z', 'event': 'revoked', 'credential': 'urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9'}
+  Smart lock log:
+    2026-11-11T23:12:12Z accepted=True  learned={'resident_city': 'El Oued'}  (access granted)
+    2026-11-11T23:12:12Z accepted=False learned={}  (unknown, expired or reused challenge (replay))
+    2026-11-11T23:12:12Z accepted=False learned={}  (disclosure does not match the signed digests)
+    2026-11-11T23:12:12Z accepted=False learned={}  (presenter is not the credential subject)
+    2026-11-11T23:12:12Z accepted=False learned={}  (holder signature invalid (stolen or altered presentation))
+    2026-11-11T23:12:12Z accepted=False learned={}  (issuer is not trusted)
+    2026-11-11T23:12:12Z accepted=False learned={'given_name': 'Ahmed'}  (claim 'resident_city' not disclosed)
+    2026-11-11T23:12:12Z accepted=False learned={}  (presentation was made for another verifier)
+    2026-11-11T23:22:12Z accepted=True  learned={'resident_city': 'El Oued'}  (access granted)
+    2026-11-11T23:22:12Z accepted=False learned={'resident_city': 'El Oued'}  (credential revoked)
+
+All 12 scenario outcomes match expectations. Artifacts in D:\TP Sécurité IoT & Cybersécurité\TP3 — Anonymization and self-sovereign identity\results\part_b

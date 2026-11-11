@@ -1,0 +1,15 @@
+{
+  "type": "TP3BitstringStatusList",
+  "id": "did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu#status-1",
+  "issuer": "did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu",
+  "updated": "2026-11-11T23:07:12Z",
+  "size": 131072,
+  "encodedList": "H4sIAAAAAAAC_-3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAIC3AYbSVKsAQAAA",
+  "proof": {
+    "type": "Ed25519Signature-TP3",
+    "verificationMethod": "did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu#z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu",
+    "proofPurpose": "statusList",
+    "created": "2026-11-11T23:07:12Z",
+    "proofValue": "z1kKLK2xdEF3sPThb44DJRJvCR4E9c3ot9WLhJT3GWDpTqCpbodvUuxqJ1opJp3EZTVYZg3MsGFq338ETvJxfjDh"
+  }
+}

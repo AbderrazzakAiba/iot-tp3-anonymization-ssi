@@ -1,0 +1,14 @@
+# Tested with Python 3.13 on Windows 11.
+pandas==3.1.1
+numpy==2.5.4
+matplotlib==3.11.2
+scipy==1.18.1
+diffprivlib==0.6.6
+# diffprivlib 0.6.6 is not compatible with scikit-learn >= 1.8
+scikit-learn==1.7.2
+cryptography==50.0.2
+pytest==9.2.0
+# pycanon pins old numpy/pandas versions that need a C compiler on Python 3.13.
+# Install it separately WITHOUT its pins:  pip install --no-deps pycanon==1.3.6
+beartype==0.23.1
+tabulate==0.10.0

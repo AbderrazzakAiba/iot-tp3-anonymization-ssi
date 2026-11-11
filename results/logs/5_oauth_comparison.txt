@@ -1,0 +1,9 @@
+WHAT THE IDENTITY PROVIDER / ISSUER LEARNS DURING ONE WEEK
+  OAuth IdP : 10 login events -> {'smart-lock': 7, 'age-restricted-service': 2, 'pharmacy': 1} (who, where, when)
+  SSI issuer: 1 event  -> ['issued'] (no usage at all)
+
+WHAT EACH SERVICE LEARNS
+  service                 OAuth/OIDC (scopes)                                         SSI (selective disclosure)
+  smart-lock              address, birthdate, family_name, given_name, sub            resident_city
+  age-restricted-service  birthdate, family_name, given_name, sub                     over_18
+  pharmacy                address, birthdate, email, family_name, given_name, sub     family_name, given_name

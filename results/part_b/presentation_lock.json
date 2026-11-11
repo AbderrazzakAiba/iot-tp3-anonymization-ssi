@@ -1,0 +1,54 @@
+{
+  "type": "TP3Presentation",
+  "holder": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+  "verifiableCredential": {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2"
+    ],
+    "id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "type": [
+      "VerifiableCredential",
+      "ResidentCredential"
+    ],
+    "issuer": "did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu",
+    "validFrom": "2026-11-11T23:07:12Z",
+    "validUntil": "2027-11-11T23:07:12Z",
+    "credentialSubject": {
+      "id": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+      "_sd_alg": "sha-256",
+      "_sd": [
+        "8w6CFcmyxZOi-t00OuvACebT8Dqz8FeMfkuo9B0nSTw",
+        "9mZ-9Me431h7r7Ge9CWkh2jR9AYW8kAcM1qjsc7q3tU",
+        "QT-xf5jA2FMcFy1m-KJ8HukIke22FXqzVfIbUYruGFk",
+        "by1NAueL-N1V4UKNSqSfHY6CYsyGCY8BKD5oqdGwZJQ",
+        "cirAq5scoz26BQ1zzqEXDbdtn3DMFhmhAUfi8sY_biM",
+        "flXj-LTT7AG8jXI50025f8MyAREhqVUA03FD161mrJ0",
+        "odAfVlPIn5TvUBa1SV1b6AcLWpTP_QtKaBP7LLV8iU0"
+      ]
+    },
+    "credentialStatus": {
+      "type": "TP3BitstringStatusListEntry",
+      "statusListCredential": "did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu#status-1",
+      "statusListIndex": 45264
+    },
+    "proof": {
+      "type": "Ed25519Signature-TP3",
+      "verificationMethod": "did:key:z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu#z6MkehEeA8st7JSsCG5BA4xziS2JQPGwDdGFpfSSTVHVVXSu",
+      "proofPurpose": "assertionMethod",
+      "created": "2026-11-11T23:07:12Z",
+      "proofValue": "z3kSbxLsmY3vpge1JNEDEFK2xfVBWDxa9K5XVsbTxhf6yLNV25pwGqW1XEtZvraz2cy7nHQFkythNtnq1CUw1TGXQ"
+    }
+  },
+  "disclosures": [
+    "WyJDdDNUR1lRSjk0WmluQ01IOVdBT0NRIiwicmVzaWRlbnRfY2l0eSIsIkVsIE91ZWQiXQ"
+  ],
+  "nonce": "2EybKiPVxX_C6QJmbCGOJA",
+  "audience": "did:key:z6MkvibY4kc8JqmMsXjLXot6kWMPkBfDFEUSjL2UVjb9FHzA",
+  "proof": {
+    "type": "Ed25519Signature-TP3",
+    "verificationMethod": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT#z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "proofPurpose": "authentication",
+    "created": "2026-11-11T23:12:12Z",
+    "proofValue": "z5oCXH22XyAo2CFb1RsGaF6WpYnb41uVtnQ9BKY4PKFSVdS9Zds5iMmq6hUQT4Cd2DKXmMCHuqA2nBtArzCyGjyVK"
+  }
+}

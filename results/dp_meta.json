@@ -1,0 +1,9 @@
+{
+  "n": 313,
+  "bound_kwh": 1000.0,
+  "peak_hour": 19,
+  "trials": 300,
+  "true_peak_mean_kwh": 852.2689889798238,
+  "true_daily_mean_kwh": 632.997305395568,
+  "households_clipped_share": 0.14057507987220447
+}

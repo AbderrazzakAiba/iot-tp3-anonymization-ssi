@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+# Raw dataset (11.8 MB zip from Zenodo) is downloaded by part_a/prepare_data.py, never committed.
+data/raw/
+# Private keys, if a wallet is ever persisted to disk.
+part_b/wallet/*.key
+node_modules/
+# Word lock files and partial downloads
+~$*
+*.part

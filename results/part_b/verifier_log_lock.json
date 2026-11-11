@@ -1,0 +1,90 @@
+[
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": true,
+    "reason": "access granted",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {
+      "resident_city": "El Oued"
+    }
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "unknown, expired or reused challenge (replay)",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {}
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "disclosure does not match the signed digests",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {}
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "presenter is not the credential subject",
+    "holder_did": "did:key:z6MkjDzWHbefj2ienTjhkCtGeFeqoHBK4QT12y3Qiz4po3SX",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {}
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "holder signature invalid (stolen or altered presentation)",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {}
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "issuer is not trusted",
+    "holder_did": "did:key:z6MkjDzWHbefj2ienTjhkCtGeFeqoHBK4QT12y3Qiz4po3SX",
+    "credential_id": "urn:uuid:5180f135-def1-425a-ab38-981fcfcdaf6b",
+    "learned_claims": {}
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "claim 'resident_city' not disclosed",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {
+      "given_name": "Ahmed"
+    }
+  },
+  {
+    "time": "2026-11-11T23:12:12Z",
+    "accepted": false,
+    "reason": "presentation was made for another verifier",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {}
+  },
+  {
+    "time": "2026-11-11T23:22:12Z",
+    "accepted": true,
+    "reason": "access granted",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {
+      "resident_city": "El Oued"
+    }
+  },
+  {
+    "time": "2026-11-11T23:22:12Z",
+    "accepted": false,
+    "reason": "credential revoked",
+    "holder_did": "did:key:z6MkwHZ7fcQg5uQqHTRgDQRx7A87wx8J9uzNu7P8heKFX2kT",
+    "credential_id": "urn:uuid:dc3dd201-a466-4b5c-acac-cca4f26c64f9",
+    "learned_claims": {
+      "resident_city": "El Oued"
+    }
+  }
+]

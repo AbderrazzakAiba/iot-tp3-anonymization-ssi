@@ -1,0 +1,34 @@
+{
+  "zip": {
+    "released_records": 313,
+    "unique_matches": 0,
+    "correct_reidentifications": 0,
+    "reidentification_rate": 0.0,
+    "unique_in_release": 0,
+    "unique_share": 0.0
+  },
+  "age+sex": {
+    "released_records": 313,
+    "unique_matches": 3,
+    "correct_reidentifications": 3,
+    "reidentification_rate": 0.0096,
+    "unique_in_release": 42,
+    "unique_share": 0.1342
+  },
+  "age+zip": {
+    "released_records": 313,
+    "unique_matches": 88,
+    "correct_reidentifications": 88,
+    "reidentification_rate": 0.2812,
+    "unique_in_release": 238,
+    "unique_share": 0.7604
+  },
+  "age+zip+sex": {
+    "released_records": 313,
+    "unique_matches": 150,
+    "correct_reidentifications": 150,
+    "reidentification_rate": 0.4792,
+    "unique_in_release": 275,
+    "unique_share": 0.8786
+  }
+}

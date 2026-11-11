@@ -1,0 +1,33 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.2.0, pluggy-1.7.0 -- D:\TP Sécurité IoT & Cybersécurité\TP3 — Anonymization and self-sovereign identity\.venv\Scripts\python.exe
+rootdir: D:\TP Sécurité IoT & Cybersécurité\TP3 — Anonymization and self-sovereign identity
+collecting ... collected 26 items
+
+tests/test_anonymization.py::test_naive_release_is_linkable PASSED      
+tests/test_anonymization.py::test_k_anonymity_holds_and_blocks_linkage[2] PASSED
+tests/test_anonymization.py::test_k_anonymity_holds_and_blocks_linkage[5] PASSED
+tests/test_anonymization.py::test_k_anonymity_holds_and_blocks_linkage[10] PASSED
+tests/test_anonymization.py::test_information_loss_grows_with_k PASSED  
+tests/test_anonymization.py::test_laplace_error_matches_theory PASSED   
+tests/test_ssi.py::test_base58_roundtrip_with_leading_zeros PASSED      
+tests/test_ssi.py::test_did_key_format_and_resolution PASSED            
+tests/test_ssi.py::test_did_key_rejects_garbage PASSED                  
+tests/test_ssi.py::test_document_proof_detects_any_change PASSED        
+tests/test_ssi.py::test_disclosures_are_salted PASSED                   
+tests/test_ssi.py::test_credential_hides_all_values PASSED              
+tests/test_ssi.py::test_issuance_requires_did_control PASSED            
+tests/test_ssi.py::test_issuance_challenge_single_use PASSED            
+tests/test_ssi.py::test_valid_presentation_reveals_only_chosen_claim PASSED
+tests/test_ssi.py::test_replay_rejected PASSED                          
+tests/test_ssi.py::test_expired_challenge_rejected PASSED               
+tests/test_ssi.py::test_tampered_credential_rejected PASSED             
+tests/test_ssi.py::test_forged_disclosure_rejected PASSED               
+tests/test_ssi.py::test_stolen_credential_rejected PASSED               
+tests/test_ssi.py::test_untrusted_issuer_rejected PASSED                
+tests/test_ssi.py::test_wrong_audience_rejected PASSED                  
+tests/test_ssi.py::test_policy_requires_disclosure PASSED               
+tests/test_ssi.py::test_revocation PASSED                               
+tests/test_ssi.py::test_stale_status_list_fails_closed PASSED           
+tests/test_ssi.py::test_forged_status_list_refused PASSED               
+
+============================= 26 passed in 10.53s =============================

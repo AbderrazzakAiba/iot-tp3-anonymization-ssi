@@ -1,0 +1,14 @@
+{
+  "lock_resident_city": true,
+  "service_over_18": true,
+  "replay": false,
+  "fake_disclosure": false,
+  "stolen_credential": false,
+  "stolen_impersonation": false,
+  "untrusted_issuer": false,
+  "policy_not_met": false,
+  "wrong_audience": false,
+  "revoked_but_cache_old": true,
+  "revoked": false,
+  "stale_status_list": false
+}
